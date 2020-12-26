@@ -8,8 +8,8 @@ module.exports = {
 
   devServer: {
     proxy: {
-      '/mmdb': {
-        target: 'https://wx.maoyan.com',
+      '/api': {
+        target: 'https://product.zhaoliangji.com',
         changeOrigin: true
       }
     }

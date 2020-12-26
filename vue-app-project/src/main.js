@@ -6,6 +6,9 @@ Vue.config.productionTip = false
 
 import './assets/reset.css'
 
+import Http from '@/utils/http'
+Vue.prototype.$http = new Http()
+
 new Vue({
   router,
   render: h => h(App)
