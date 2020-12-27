@@ -28,7 +28,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   data(){
     return {
@@ -37,7 +36,7 @@ export default {
   },
   async mounted(){
     let result = await this.$http.get({
-      url: 'product/cate_v3',
+      url: '/api/product/cate_v3',
       params: {
           x_system_type:"wx_xcx",
           x_app_version:"8.2.31"

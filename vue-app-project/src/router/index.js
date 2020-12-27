@@ -2,20 +2,16 @@ import Vue from "vue";
 import Router from "vue-router";
 
 import Home from "@/views/Home";
-// import Index from "@/views/home/index/Index"
-// import Classify from "@/views/home/classify/Classify";
-// import Sell from "@/views/home/sell/Sell"
-// import Group from "@/views/home/group/Group"
-// import Mine from "@/views/home/mine/Mine"
-
-// 路由懒加载ES6写法，优化
-const Index = () => import("@/views/home/index/Index") 
-const Classify = () => import("@/views/home/classify/Classify") 
-const Sell = () => import("@/views/home/sell/Sell") 
-const Group = () => import("@/views/home/group/Group") 
-const Mine = () => import("@/views/home/mine/Mine") 
+import Index from "@/views/home/index/Index"
+import Classify from "@/views/home/classify/Classify";
+import Sell from "@/views/home/sell/Sell"
+import Group from "@/views/home/group/Group"
+import Mine from "@/views/home/mine/Mine"
 
 Vue.use(Router);
+import VueRouter from "vue-router";
+
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -52,9 +48,9 @@ const routes = [
         path: "mine",
         name:"mine",
         component: Mine,
-      },
-    ],
-  },
+      }
+    ]
+  }
 ];
 
 const router = new Router({
