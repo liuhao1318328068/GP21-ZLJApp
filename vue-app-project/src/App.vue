@@ -1,16 +1,3 @@
 <template>
-  <div>
-    <router-view></router-view>
-    <div>{{message}}</div>
-  </div>
+  <router-view></router-view>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      message:"xln",
-    }
-  },
-}
-</script>>
