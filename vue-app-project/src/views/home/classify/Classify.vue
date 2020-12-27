@@ -29,7 +29,21 @@
 
 <script>
 export default {
-
+  data(){
+    return {
+      goodsList:[]
+    }
+  },
+  async mounted(){
+    let result = await this.$http.get({
+      url: '/api/product/cate_v3',
+      params: {
+          x_system_type:"wx_xcx",
+          x_app_version:"8.2.31"
+        }
+    })
+    console.log(result)
+  }
 };
 </script>
 

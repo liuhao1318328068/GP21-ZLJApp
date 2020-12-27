@@ -9,6 +9,9 @@ import Group from "@/views/home/group/Group"
 import Mine from "@/views/home/mine/Mine"
 
 Vue.use(Router);
+import VueRouter from "vue-router";
+
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -45,9 +48,9 @@ const routes = [
         path: "mine",
         name:"mine",
         component: Mine,
-      },
-    ],
-  },
+      }
+    ]
+  }
 ];
 
 const router = new Router({
