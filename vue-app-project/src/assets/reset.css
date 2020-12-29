@@ -3,15 +3,18 @@
 ::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 html,
 body {
   overflow: hidden;
-  height: 100%; }
+  height: 100%;
+}
 
 ::-webkit-scrollbar {
-  display: none; }
+  display: none;
+}
 
 html {
   background-color: #fff;
@@ -19,14 +22,16 @@ html {
   /* font-size: 100px; */
   font-size: 26.6666667vw;
   -webkit-user-select: none;
-  user-select: none; }
+  user-select: none;
+}
 
 body {
   margin: 0;
   font-size: 0.14em;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  font-family: PingFangSC-Regular, Hiragino Sans GB, sans-serif }
+  font-family: PingFangSC-Regular, Hiragino Sans GB, sans-serif;
+}
 
 ul,
 ol,
@@ -52,7 +57,8 @@ td,
 pre,
 xmp {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 input,
 textarea,
@@ -65,7 +71,8 @@ code,
 kbd,
 samp {
   line-height: inherit;
-  font-family: inherit; }
+  font-family: inherit;
+}
 
 h1,
 h2,
@@ -79,7 +86,8 @@ input,
 textarea,
 button,
 select {
-  font-size: inherit; }
+  font-size: inherit;
+}
 
 address,
 cite,
@@ -88,23 +96,27 @@ em,
 i,
 optgroup,
 var {
-  font-style: normal; }
+  font-style: normal;
+}
 
 table {
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
-  text-align: left; }
+  text-align: left;
+}
 
 ul,
 ol,
 menu {
-  list-style: none; }
+  list-style: none;
+}
 
 fieldset,
 img {
   border: 0;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 article,
 aside,
@@ -118,27 +130,32 @@ menu,
 nav,
 section,
 summary {
-  display: block; }
+  display: block;
+}
 
 audio,
 canvas,
 video {
-  display: inline-block; }
+  display: inline-block;
+}
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "\0020"; }
+  content: "\0020";
+}
 
 textarea,
 pre,
 xmp {
   overflow: auto;
-  -webkit-overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch;
+}
 
 textarea {
-  resize: vertical; }
+  resize: vertical;
+}
 
 input,
 textarea,
@@ -146,23 +163,27 @@ button,
 select,
 summary,
 a {
-  outline: 0 none; }
+  outline: 0 none;
+}
 
 input,
 textarea,
 button,
 select {
-  color: inherit; }
-  input:disabled,
-  textarea:disabled,
-  button:disabled,
-  select:disabled {
-    opacity: 1; }
+  color: inherit;
+}
+input:disabled,
+textarea:disabled,
+button:disabled,
+select:disabled {
+  opacity: 1;
+}
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   padding: 0;
-  border: 0; }
+  border: 0;
+}
 
 input[type="button"],
 input[type="submit"],
@@ -170,27 +191,33 @@ input[type="reset"],
 input[type="file"]::-webkit-file-upload-button,
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
-  appearance: none; }
+  appearance: none;
+}
 
 ::-webkit-details-marker {
-  display: none; }
+  display: none;
+}
 
 mark {
-  background-color: rgba(0, 0, 0, 0); }
+  background-color: rgba(0, 0, 0, 0);
+}
 
 a,
 ins,
 s,
 u,
 del {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a,
 img {
-  -webkit-touch-callout: none; }
+  -webkit-touch-callout: none;
+}
 
 a {
-  color: #00afc7; }
+  color: #00afc7;
+}
 
 .g-clear::after,
 .g-mod::after {
@@ -198,22 +225,38 @@ a {
   overflow: hidden;
   clear: both;
   height: 0;
-  content: "\0020"; }
+  content: "\0020";
+}
 
 @font-face {
   font-family: yofont;
-  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format("woff"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format("truetype"); }
+  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format("woff"),
+    url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format("truetype");
+}
 
 .yo-ico {
   font-family: yofont !important;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 #root {
-  height: 100%; }
+  height: 100%;
+}
 
 #app {
   height: 100%;
+}
+
+.box {
+  padding: .16rem;
+  margin: 0.05rem 0.12rem;
+  border-radius: 0.08rem;
+  background-color: #fff;
+  -webkit-border-radius: 0.08rem;
+  -moz-border-radius: 0.08rem;
+  -ms-border-radius: 0.08rem;
+  -o-border-radius: 0.08rem;
 }

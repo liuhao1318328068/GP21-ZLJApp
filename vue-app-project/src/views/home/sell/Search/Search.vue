@@ -5,7 +5,6 @@
       placeholder="搜索您要卖的机型、品牌"
       input-align="center"
       shape="round"
-      background="rgb(252,253,254)"
     />
   </div>
 </template>
@@ -23,4 +22,7 @@ export default {
   },
 };
 </script>
-<style lang='stylus' scoped></style>
+<style lang='stylus' scoped>
+.van-search
+  padding 0.05rem 0.12rem
+</style>

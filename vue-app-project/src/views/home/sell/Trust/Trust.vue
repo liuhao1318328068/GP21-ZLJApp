@@ -13,10 +13,12 @@
           <div class="sellBlock">
               <h3>卖手机</h3>
               <p>苹果/华为/小米等</p>
+              <div class="sell-iconnn">&#xe6c7;</div>
           </div>
           <div class="sellBlock">
               <h3>卖数码</h3>
               <p>平板/电脑等</p>
+              <div class="sell-iconnn">&#xe688;</div>
           </div>
       </div>
   </div>
@@ -29,50 +31,72 @@ export default {
 </script>
 
 <style lang='stylus' scoped>
+@import "~@/assets/stylus/icon.styl"
+
 .box
     display flex
     flex-direction column
     justify-content space-between
-    padding 20px
     box-sizing border-box
 
     .top
         display flex
-        height 90px
         justify-content space-between
+        color #999
 
         .left
             p
+                height .35rem
+                line-height .35rem
+                display flex
+                align-items center
                 img
-                    width 20px
+                    height .17rem
                 span
-                    font-size 18px
+                    font-size .15rem
+                    color #000
                 &:last-child
-                    font-size 12px
-                    color rgb(155,155,155)
+                    font-size .1rem
+                    
         .right
-            height 90px
-            line-height 90px
-            color #999999
-            font-size 16px
+            height .72rem
+            line-height .72rem
+            font-size .1rem
 
             span 
-                color rgb(255,51,51)
+                color #f33
                 i
                     font-style normal
                     font-weight bold
+                    font-size .15rem
 
     .bottom
         display flex
         justify-content space-between
 
         .sellBlock
-            border-radius 10px
+            height 1rem
+            border-radius .1rem
             color #fff
-            padding 10px
-
+            padding .15rem
+            position relative
+            h3
+                font-size .16rem
+            p
+                font-size .12rem
+            .sell-iconnn
+                position absolute
+                right .1rem
             &:first-child
-                background linear-gradient(to right bottom, rgb(62,109,254) 0%, rgb(14,198,254) 100%) 
+                width 1.69rem
+                background linear-gradient(to right bottom, #3e6eff 0%, #0bcdfe 100%)
+                .sell-iconnn
+                    bottom .08rem
+                    font-size .42rem
             &:last-child
-                background linear-gradient(to right bottom, rgb(2,206,174) 0%, rgb(134,217,211) 100%) 
+                width 1.42rem
+                background linear-gradient(to right bottom, #02cfae 0%, #89dad4 100%)
+                .sell-iconnn
+                    bottom .04rem
+                    font-size .5rem
 </style>

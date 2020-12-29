@@ -26,9 +26,12 @@ export default {
 };
 </script>
 <style lang='stylus' scoped>
-.my-swipe {
-  img {
-    width: 100%;
-  }
-}
+.my-swipe
+  .van-swipe__track
+    width 100%
+    img 
+      width 100%
+  
+.box
+  padding 0
 </style>
