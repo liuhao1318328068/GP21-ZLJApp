@@ -7,6 +7,7 @@ import Classify from "@/views/home/classify/Classify";
 import Sell from "@/views/home/sell/Sell"
 import Group from "@/views/home/group/Group"
 import Mine from "@/views/home/mine/Mine"
+import Recommend from "@/views/home/classify/goodsList/Recommend"
 
 Vue.use(Router);
 import VueRouter from "vue-router";
@@ -33,6 +34,14 @@ const routes = [
         path: "classify",
         name:"classify",
         component: Classify,
+        redirect: "/home/classify/1",
+        children: [
+          {
+            path: ":id",
+            name:"recommend",
+            component: Recommend,
+          }
+        ]
       },
       {
         path: "sell",

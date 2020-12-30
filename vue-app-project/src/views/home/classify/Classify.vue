@@ -1,37 +1,35 @@
 <template>
     <main class="main">
-      <h1>滕王阁序</h1>
-      <p>
-        豫章故郡，洪都新府。星分翼轸，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐孺下陈蕃之榻。雄州雾列，俊采星驰。台隍枕夷夏之交，宾主尽东南之美。都督阎公之雅望，棨戟遥临；宇文新州之懿范，襜帷暂驻。十旬休假，胜友如云；千里逢迎，高朋满座。腾蛟起凤，孟学士之词宗；紫电青霜，王将军之武库。家君作宰，路出名区；童子何知，躬逢胜饯。
-
-时维九月，序属三秋。潦水尽而寒潭清，烟光凝而暮山紫。俨骖騑于上路，访风景于崇阿；临帝子之长洲，得天人之旧馆。层峦耸翠，上出重霄；飞阁流丹，下临无地。鹤汀凫渚，穷岛屿之萦回；桂殿兰宫，即冈峦之体势。
-
-披绣闼，俯雕甍，山原旷其盈视，川泽纡其骇瞩。闾阎扑地，钟鸣鼎食之家；舸舰弥津，青雀黄龙之舳。云销雨霁，彩彻区明。落霞与孤鹜齐飞，秋水共长天一色。渔舟唱晚，响穷彭蠡之滨；雁阵惊寒，声断衡阳之浦。
-
-遥襟甫畅，逸兴遄飞。爽籁发而清风生，纤歌凝而白云遏。睢园绿竹，气凌彭泽之樽；邺水朱华，光照临川之笔。四美具，二难并。穷睇眄于中天，极娱游于暇日。天高地迥，觉宇宙之无穷；兴尽悲来，识盈虚之有数。望长安于日下，目吴会于云间。地势极而南溟深，天柱高而北辰远。关山难越，谁悲失路之人？萍水相逢，尽是他乡之客。怀帝阍而不见，奉宣室以何年？
-
-嗟乎！时运不齐，命途多舛。冯唐易老，李广难封。屈贾谊于长沙，非无圣主；窜梁鸿于海曲，岂乏明时？所赖君子见机，达人知命。老当益壮，宁移白首之心？穷且益坚，不坠青云之志。酌贪泉而觉爽，处涸辙以犹欢。北海虽赊，扶摇可接；东隅已逝，桑榆非晚。孟尝高洁，空余报国之情；阮籍猖狂，岂效穷途之哭！
-
-勃，三尺微命，一介书生。无路请缨，等终军之弱冠；有怀投笔，慕宗悫之长风。舍簪笏于百龄，奉晨昏于万里。非谢家之宝树，接孟氏之芳邻。他日趋庭，叨陪鲤对；今兹捧袂，喜托龙门。杨意不逢，抚凌云而自惜；钟期既遇，奏流水以何惭？
-
-呜乎！胜地不常，盛筵难再；兰亭已矣，梓泽丘墟。临别赠言，幸承恩于伟饯；登高作赋，是所望于群公。敢竭鄙怀，恭疏短引；一言均赋，四韵俱成。请洒潘江，各倾陆海云尔：
-
-滕王高阁临江渚，佩玉鸣鸾罢歌舞。
-
-画栋朝飞南浦云，珠帘暮卷西山雨。
-
-闲云潭影日悠悠，物换星移几度秋。
-
-阁中帝子今何在？槛外长江空自流。
-      </p>
+      <header class="classifyHeader">
+        <van-search shape="round" v-model="value" placeholder="请输入搜索关键词" />
+        <div class="shopingCar nav-iconnn">&#xe609;</div>
+      </header>
+      <div class="itemClassify">
+        <van-sidebar v-model="activeKey">
+          <van-sidebar-item v-for="(type,i) in list" :to="'/home/classify/'+type.cate_id" :title="type.type_name" :key="type+i"/>
+        </van-sidebar>
+        <div class="goods">
+          <router-view :infoList="infoList" ></router-view>
+        </div>
+      </div>
     </main>
 </template>
 
 <script>
+import Vue from 'vue';
+import { Search } from 'vant';
+import { Sidebar, SidebarItem } from 'vant';
+
+Vue.use(Sidebar);
+Vue.use(SidebarItem);
+Vue.use(Search);
 export default {
   data(){
     return {
-      goodsList:[]
+      value: '',
+      activeKey: 0,
+      list:[],
+      infoList:[]
     }
   },
   async mounted(){
@@ -42,17 +40,76 @@ export default {
           x_app_version:"8.2.31"
         }
     })
-    console.log(result)
+    result.data.list.map((item ,index ,arr)=>{
+    this.list.push(item)
+    })
+    // console.log(this.$route.params.id)
+    //获取数据后，给一个初始数据，不写i=0，是因为如果不在第一个分类页刷新，那么舒心后应该显示的是当前刷新页
+    let num=this.$route.params.id-0//获取当前cate_id，查找id所在元素（一个对象）的下标，将该元素传入组件渲染
+    for(let i=0;i<this.list.length;i++){
+        if(this.list[i].cate_id==num){
+          this.activeKey=i
+          this.infoList=this.list[i].info
+        }
+      }
+  },
+  watch:{
+    //观察路由改变，将传入的数据改变
+    $route(to,from){
+      var index=0
+      for(let i=0;i<this.list.length;i++){
+        if(this.list[i].cate_id==to.params.id) index=i
+      }
+      this.infoList=this.list[index].info
+      // console.log(this.infoList)
+    }
+  },
+  methods:{
   }
+  
 };
 </script>
 
 <style lang="stylus" scoped>
+@import "~@/assets/stylus/icon.styl"
 @import '~@/assets/stylus/border.styl';
 .main 
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  flex: 1;
-  overflow-y scroll
+  height: 6.18rem;
+  .classifyHeader
+    height .44rem
+    width 100%
+    .van-search 
+      padding .10rem 0 .10rem .12rem
+      width 3.14rem
+      height .44rem
+      .van-search__content--round 
+        border-radius .10rem
+    .shopingCar
+      overflow-y scroll
+      position absolute
+      right 0
+      top 0
+      height .44rem
+      width .62rem
+      line-height .44rem
+      font-weight bold
+      font-size .28rem
+      text-align center
+  .itemClassify
+    height 5.74rem
+    .van-sidebar
+      height 5.74rem
+      overflow-y scroll
+      .van-sidebar-item
+        text-align center
+        padding .15rem .12rem
+    .goods
+      height 5.74rem
+      padding 0 .12rem
+      overflow-y scroll
+      width 2.95rem
+      position absolute
+      right 0
+      top .44rem
+
 </style>
