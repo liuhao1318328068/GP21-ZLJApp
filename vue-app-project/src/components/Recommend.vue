@@ -29,6 +29,7 @@ export default {
     
   },
   mounted() {},
+   
 };
 </script>
 

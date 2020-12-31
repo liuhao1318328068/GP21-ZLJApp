@@ -7,7 +7,7 @@ import Classify from "@/views/home/classify/Classify";
 import Sell from "@/views/home/sell/Sell"
 import Group from "@/views/home/group/Group"
 import Mine from "@/views/home/mine/Mine"
-import Recommend from "@/views/home/classify/goodsList/Recommend"
+import Recommend from "@/components/Recommend"
 
 Vue.use(Router);
 import VueRouter from "vue-router";
