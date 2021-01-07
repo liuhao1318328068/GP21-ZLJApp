@@ -3,10 +3,6 @@ import Router from "vue-router";
 
 import Home from "@/views/Home";
 import Index from "@/views/home/index/Index"
-import Classify from "@/views/home/classify/Classify";
-import Sell from "@/views/home/sell/Sell"
-import Group from "@/views/home/group/Group"
-import Mine from "@/views/home/mine/Mine"
 
 Vue.use(Router);
 import VueRouter from "vue-router";
@@ -32,25 +28,73 @@ const routes = [
       {
         path: "classify",
         name:"classify",
-        component: Classify,
+        component: () => import("@/views/home/classify/Classify"),
       },
       {
         path: "sell",
         name:"sell",
-        component: Sell,
+        component: () => import("@/views/home/sell/Sell"),
       },
       {
         path: "group",
         name:"group",
-        component: Group,
+        component: () => import("@/views/home/group/Group"),
       },
       {
         path: "mine",
         name:"mine",
-        component: Mine,
+        component: () => import("@/views/home/mine/Mine"),
       }
     ]
-  }
+  },
+  {
+    path: "/sellEntry",
+    name:"sellEntry",
+    component: () => import("@sell/SellEntry"),
+    children: [
+      {
+        path: "searchProduct",
+        name:"searchProduct",
+        component: () => import("@sell/SearchProduct"),
+      },
+      {
+        path: "redPacket",
+        name:"redPacket",
+        component: () => import("@sell/RedPacket"),
+      },
+      {
+        path: "sellClassify",
+        name:"sellClassify",
+        component: () => import("@sell/SellClassify"),
+      },
+      {
+        path: "recoverProcess",
+        name:"recoverProcess",
+        component: () => import("@sell/RecoverProcess"),
+      },
+      {
+        path: "moreHistory",
+        name:"moreHistory",
+        component: () => import("@sell/MoreHistory"),
+      },
+      {
+        path: "qualityReport",
+        name:"qualityReport",
+        component: () => import("@sell/QualityReport"),
+      },
+      {
+        path: "moreQuestions",
+        name:"moreQuestions",
+        component: () => import("@sell/MoreQuestions"),
+      },
+      {
+        path: "evaluate",
+        name:"evaluate",
+        component: () => import("@sell/Evaluate/index"),
+      },
+    ]
+  },
+  
 ];
 
 const router = new Router({

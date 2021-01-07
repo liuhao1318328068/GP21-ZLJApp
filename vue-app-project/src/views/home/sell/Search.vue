@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <van-search
-      v-model="value"
-      placeholder="搜索您要卖的机型、品牌"
-      input-align="center"
-      shape="round"
-    />
-  </div>
+  <van-search
+    placeholder="搜索您要卖的机型、品牌"
+    input-align="center"
+    shape="round"
+    @click="toSearch"
+  />
 </template>
 
 <script>
@@ -19,6 +17,12 @@ export default {
     return {
       value: "",
     };
+  },
+
+  methods: {
+    toSearch() {
+      this.$router.push('/sellEntry/searchProduct')
+    }
   },
 };
 </script>
