@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@/assets/stylus/border.styl';
+@import '~@/assets/stylus/border.styl'
 .wrap 
   display: flex;
   flex-direction: column;
