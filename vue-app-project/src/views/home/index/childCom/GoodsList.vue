@@ -14,7 +14,7 @@
             <p v-if="item.ds_price"><span>{{item.ds_price}}</span></p>
           </div>
           <div class="rg">
-            <h2><img :src="item.certified_icon_url_arr[0].img_url" alt="">{{item.product_name}}</h2>
+            <h2 v-if="item.certified_icon_url_arr" ><img :src="item.certified_icon_url_arr[0].img_url" alt="">{{item.product_name}}</h2>
             <p>
               <span>{{item.degree_name}}</span>
               <span> | {{item.degree_desc}}</span> 
@@ -74,9 +74,9 @@ export default {
     async onLoad() {
         console.log(0)
         let result=await this.$http.get({
-          url:'http://localhost:9000'
+          url:'/data/mock'
         })
-        console.log(result)
+        console.log(result) // TODO 拿到数据后，将列表数据合并，需要再声明一个变量
         this.loading = false
       },
     },
@@ -86,11 +86,11 @@ export default {
 <style scoped lang="stylus">
 @import '~@/assets/stylus/ellipsis.styl'
 #goods-list
-  overflow-y scroll
   background-color white
   .van-list 
     padding-left 12px
     .goods-item 
+      overflow-y scroll
       padding-top 18px
       clear both
       .lg

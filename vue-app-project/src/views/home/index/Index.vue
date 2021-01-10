@@ -65,7 +65,7 @@
         close-icon="close"
         close-icon-position="bottom-left"
         v-if="popUpUrl"
-        class="pop-up"
+        id="pop-up"
       >
         <img :src='popUpUrl' alt="" width="243" height="312">
       </van-popup> -->
@@ -294,7 +294,7 @@ main
     
 </style>
 <style lang="stylus">
-.pop-up
+#pop-up
   background-color transparent 
   overflow-y visible
   i 

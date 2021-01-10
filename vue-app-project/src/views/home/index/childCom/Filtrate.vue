@@ -1,6 +1,6 @@
 <template>
     <main ref="filtrate-main" class="main">
-        <div class="box1">
+        <div id="ldh_box1">
             <van-dropdown-menu>
                 <van-dropdown-item v-model="value1" :options="option1"  />
             </van-dropdown-menu>
@@ -95,7 +95,7 @@ export default {
 
 </style>
 <style lang="stylus">
-.box1
+#ldh_box1
   .van-dropdown-menu__bar
     height 38px
     .van-ellipsis

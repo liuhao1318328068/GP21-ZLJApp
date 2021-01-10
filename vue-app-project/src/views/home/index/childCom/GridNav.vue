@@ -1,5 +1,5 @@
 <template>
-    <div class="grid-nav">
+    <div class="grid-nav" id="grid-nav">
         <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
                 <van-grid  :column-num="5">
@@ -28,25 +28,26 @@ export default {
 </script>
 
 <style lang="stylus" >
-.van-grid
-  padding 0px 14px 24px !important
-  .van-grid-item
-    padding 0 !important
-    width 69px
-    font-size 11px
-.van-grid-item__content
-  padding 0  !important
-  background-color #f5f5f5 !important
-[class*=van-hairline]::after 
-  content "" 
-  border none 
-.grid-nav .van-swipe__indicator
-  width 14px
-  height 3px 
-.grid-nav .van-swipe__indicator--active
-  background-color #646464 !important
-.grid-nav .van-grid-item__icon
-  font-size 43px 
-.grid-nav .van-swipe__indicator:not(:last-child)
-  margin-right 0
+#grid-nav
+  .van-grid
+    padding 0px 14px 24px !important
+    .van-grid-item
+      padding 0 !important
+      width 69px
+      font-size 11px
+  .van-grid-item__content
+    padding 0  !important
+    background-color #f5f5f5 !important
+  [class*=van-hairline]::after 
+    content "" 
+    border none 
+  .grid-nav .van-swipe__indicator
+    width 14px
+    height 3px 
+  .grid-nav .van-swipe__indicator--active
+    background-color #646464 !important
+  .grid-nav .van-grid-item__icon
+    font-size 43px 
+  .grid-nav .van-swipe__indicator:not(:last-child)
+    margin-right 0
 </style>

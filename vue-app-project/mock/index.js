@@ -1,8 +1,6 @@
-const http=require('http')
-var Mock=require('mockjs')
+import Mock from  'mockjs'
 
-http.createServer((req,res)=>{
-    var data=Mock.mock({
+Mock.mock('/data/mock',{
         "msg": "success",
         "code":"1",
         "data":{
@@ -46,8 +44,4 @@ http.createServer((req,res)=>{
                 }
             ]
         }
-    })
-    res.end(JSON.stringify(data))
-}).listen(9000,()=>{
-    console.log('Mock服务开启')
 })
