@@ -1,6 +1,6 @@
 import Mock from  'mockjs'
 
-Mock.mock('/data/mock',{
+Mock.mock('http://localhost:8080/data/mock',{
         "msg": "success",
         "code":"1",
         "data":{

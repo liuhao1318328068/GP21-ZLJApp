@@ -8,7 +8,7 @@
         class="van-list"
         :immediate-check="false"
       >
-        <div v-for="(item,index) in obj.data.filterData" :key="item.model_name+index" class="goods-item">
+        <div v-for="(item,index) in list" :key="item.model_name+index" class="goods-item">
           <div class="lg">
             <img :src="item.main_pic" alt="">
             <p v-if="item.ds_price"><span>{{item.ds_price}}</span></p>
@@ -66,17 +66,20 @@ export default {
     let result= await this.$http.get({ 
         url:'https://product.zhaoliangji.com/api/product/filter_res?x_app_network=wifi&x_device_id=88e9d5efed1e8ce4270755a9c24df110&_=176ce359e94.485&x_system_version=Windows%2010%20x64&x_system_type=wx_xcx&x_app_version=8.2.31&x_device_name=microsoft&x_app_name=wx_xcx&x_api_sign=bee9799d18d388158b1d384b30446ac5'
     })
-    this.obj =result
+    this.obj = result
+    this.list= result.data.filterData
     // console.log(this.obj)
     // console.log(result)
   },
   methods:{
     async onLoad() {
-        console.log(0)
         let result=await this.$http.get({
           url:'/data/mock'
         })
         console.log(result) // TODO 拿到数据后，将列表数据合并，需要再声明一个变量
+        result.data.filterData.forEach((item)=>{
+          this.list.push(item)
+        })
         this.loading = false
       },
     },
