@@ -51,7 +51,6 @@ export default {
 <style lang='stylus'>
 .sellPhone
    background-color rgb(245,247,250)
-   
 .box
     width 351px
     margin 10px auto
