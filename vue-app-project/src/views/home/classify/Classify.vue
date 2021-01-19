@@ -6,7 +6,7 @@
         v-model="value"
         placeholder="请输入搜索关键词"
       />
-      <div class="shopingCar nav-iconnn">&#xe609;</div>
+      <router-link to="/shoppingCar"><div class="shopingCar nav-iconnn">&#xe609;</div></router-link>
     </header>
     <div class="itemClassify">
       <itemClassify></itemClassify>
@@ -48,6 +48,7 @@ export default {
     .shopingCar
       overflow-y scroll
       position absolute
+      color #ccc
       right 0
       top 0
       height .44rem

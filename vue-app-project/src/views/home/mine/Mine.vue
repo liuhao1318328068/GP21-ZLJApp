@@ -58,27 +58,27 @@
                         <span class="tools-icon mine-icon">&#xe611;</span>
                         <span class="tools-text">收货地址</span>
                     </router-link>
-                    <router-link class="tools-wrap" to="/order/all">
+                    <router-link class="tools-wrap" to="/save">
                         <span class="tools-icon mine-icon">&#xe610;</span>
                         <span class="tools-text">我的收藏</span>
                     </router-link>
-                    <router-link class="tools-wrap" to="/order/all">
+                    <router-link class="tools-wrap" to="/youhuiquan">
                         <span class="tools-icon mine-icon">&#xe763;</span>
                         <span class="tools-text">优惠券</span>
                     </router-link>
-                    <router-link class="tools-wrap" to="/order/all">
+                    <router-link class="tools-wrap" to="/home/mine">
                         <span class="tools-icon mine-icon">&#xe6c4;</span>
                         <span class="tools-text">电子保修卡</span>
                     </router-link>
-                    <router-link class="tools-wrap" to="/order/all">
+                    <router-link class="tools-wrap" to="/home/mine">
                         <span class="tools-icon mine-icon">&#xe649;</span>
                         <span class="tools-text">用户反馈</span>
                     </router-link>
-                    <router-link class="tools-wrap" to="/order/all">
+                    <router-link class="tools-wrap" to="/home/mine">
                         <span class="tools-icon mine-icon">&#xe68e;</span>
                         <span class="tools-text">电话客服</span>
                     </router-link>
-                    <router-link class="tools-wrap" to="/order/all">
+                    <router-link class="tools-wrap" to="/home/mine">
                         <span class="tools-icon mine-icon">&#xe61d;</span>
                         <span class="tools-text">设置</span>
                     </router-link>

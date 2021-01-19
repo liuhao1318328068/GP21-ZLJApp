@@ -5,20 +5,18 @@
       我的订单
     </div>
     <van-tabs v-model="activeName">
-      <van-tab title="进行中" name="underway" to="/recovery/underway"
-        ><van-empty v-if="!listUnderway.length" description="当前没有相关订单">
-          <van-button color="#FF1A1A" round type="danger" class="bottom-button"
-            >前往估价</van-button
-          >
-        </van-empty></van-tab
-      >
-      <van-tab title="已结束" name="finished" to="/recovery/finished"
-        ><van-empty v-if="!listFinished.length" description="当前没有相关订单">
-          <van-button color="#FF1A1A" round type="danger" class="bottom-button"
-            >前往估价</van-button
-          >
-        </van-empty></van-tab
-      >
+      <van-tab title="购机券" name="upgrade" to="/youhuiquan/upgrade"
+        ><van-empty v-if="!listUnderway.length" description="暂无相关优惠券">
+        </van-empty
+      ></van-tab>
+      <van-tab title="回收券" name="recycel" to="/youhuiquan/recycel"
+        ><van-empty v-if="!listFinished.length" description="暂无相关优惠券">
+        </van-empty
+      ></van-tab>
+      <van-tab title="租赁券" name="hire" to="/youhuiquan/hire"
+        ><van-empty v-if="!listUnderway.length" description="暂无相关优惠券">
+        </van-empty
+      ></van-tab>
     </van-tabs>
   </div>
 </template>
@@ -27,16 +25,14 @@
 import Vue from "vue";
 import { Tab, Tabs } from "vant";
 import { Empty } from "vant";
-import { Button } from "vant";
 Vue.use(Tab);
 Vue.use(Tabs);
 Vue.use(Empty);
-Vue.use(Button);
 export default {
   data() {
     return {
-      listUnderway:[],
-      listFinished:[],
+      listUnderway: [],
+      listFinished: [],
       activeName: "receiving",
     };
   },
@@ -77,7 +73,7 @@ export default {
 </style>
 <style lang="stylus">
 #recovery .van-tabs__line
-    width 50%
+    width 30%
 #recovery .van-empty
   margin-top -2rem
   .van-empty__image

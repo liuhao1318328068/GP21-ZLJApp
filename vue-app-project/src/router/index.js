@@ -13,6 +13,9 @@ import Recovery from "@/views/order/Recovery"
 import Address from "@/views/order/Address"
 import AddressList from "@/views/order/address/AddressList"
 import AddAddress from "@/views/order/address/AddAddress"
+import ShoppingCar from "@/views/shoppingCar/ShoppingCar"
+import Save from "@/views/order/Save"
+import Youhuiquan from "@/views/order/Youhuiquan"
 
 Vue.use(Router);
 import VueRouter from "vue-router";
@@ -23,6 +26,11 @@ const routes = [
   {
     path: "/",
     redirect: "/home",
+  },
+  {
+    path:"/shoppingCar",
+    name:"shoppingCar",
+    component: ShoppingCar
   },
   {
     // Address
@@ -44,10 +52,41 @@ const routes = [
     ]
   },
   {
+    // 我的收藏
+    path:"/save",
+    name:"save",
+    component:Save
+  },
+  {
+    // youhuiquan
+    path:"/youhuiquan",
+    name:"youhuiquan",
+    component:Youhuiquan,
+    redirect: "/youhuiquan/upgrade",
+    children:[
+      // upgrade
+      {
+        path:"upgrade",
+        name:"upgrade"
+      },
+      // recycel
+      {
+        path:"recycel",
+        name:"recycel"
+      },
+      // hire
+      {
+        path:"hire",
+        name:"hire"
+      }
+    ]
+  },
+  {
     // 回收订单
     path: "/recovery",
     name:"recovery", 
     component: Recovery,
+    redirect: "/recovery/underway",
     children:[
       // underway
       {

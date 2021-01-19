@@ -6,22 +6,22 @@
     </div>
     <van-tabs v-model="activeName">
       <van-tab title="全部" name="all" to="/order/all"
-        ><van-empty description="还没有相关订单呢"
+        ><van-empty v-if="!listAll.length" description="还没有相关订单呢"
       /></van-tab>
       <van-tab title="待付款" name="obligation" to="/order/obligation"
-        ><van-empty description="还没有相关订单呢"
+        ><van-empty v-if="!listObligation.length" description="还没有相关订单呢"
       /></van-tab>
       <van-tab title="待发货" name="pending" to="/order/pending"
-        ><van-empty description="还没有相关订单呢"
+        ><van-empty v-if="!listPending.length" description="还没有相关订单呢"
       /></van-tab>
       <van-tab title="待收货" name="receiving" to="/order/receiving"
-        ><van-empty description="还没有相关订单呢"
+        ><van-empty v-if="!listReceiving.length" description="还没有相关订单呢"
       /></van-tab>
       <van-tab title="可晒单" name="scheduling" to="/order/scheduling"
-        ><van-empty description="还没有相关订单呢"
+        ><van-empty v-if="!listScheduling.length" description="还没有相关订单呢"
       /></van-tab>
       <van-tab title="售后" name="aftersale" to="/order/aftersale"
-        ><van-empty description="还没有相关订单呢"
+        ><van-empty v-if="!listAftersale.length" description="还没有相关订单呢"
       /></van-tab>
     </van-tabs>
     <!-- <router-view></router-view> -->
@@ -41,6 +41,12 @@ Vue.use(Empty);
 export default {
   data() {
     return {
+      listAll:[],
+      listObligation:[],
+      listPending:[],
+      listReceiving:[],
+      listScheduling:[],
+      listAftersale:[],
       activeName: "receiving",
     };
   },
@@ -48,12 +54,7 @@ export default {
     console.log(this.$router.currentRoute.name);
     this.activeName = this.$router.currentRoute.name;
   },
-  // watch: {
-  //   //观察路由改变，将传入的数据改变
-  //   $route(to, from) {
-  //     console.log(to)
-  //   },
-  // },
+  
   computed: {},
 };
 </script>

@@ -25,7 +25,6 @@ export default {
     
   },
   computed: {
-    // 如果想要打印查看传过来的数据，必须使用计算属性或者watch，
     
   },
   mounted() {},
