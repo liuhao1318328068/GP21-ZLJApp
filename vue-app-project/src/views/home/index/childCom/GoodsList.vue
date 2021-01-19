@@ -14,7 +14,10 @@
             <p v-if="item.ds_price"><span>{{item.ds_price}}</span></p>
           </div>
           <div class="rg">
-            <h2 v-if="item.certified_icon_url_arr" ><img :src="item.certified_icon_url_arr[0].img_url" alt="">{{item.product_name}}</h2>
+            <h2>
+              <img v-if="item.certified_icon_url_arr" :src="item.certified_icon_url_arr[0].img_url" alt="">
+              {{item.product_name}}
+            </h2>
             <p>
               <span>{{item.degree_name}}</span>
               <span> | {{item.degree_desc}}</span> 
@@ -32,7 +35,6 @@
               :key="elem.tag_name" 
               :v-if="item.feature_tag.length"
             >{{elem.tag_name}}</van-button>
-
             <van-button
               v-for="elem1 in item.difference_info_tag"
               :color="'#'+elem1.font_color" 
@@ -42,7 +44,18 @@
               :v-if="item.difference_info_tag.length"
             >{{elem1.tag_name}}</van-button>
           </div>
+          <router-link 
+          :to="{
+            path:'/goodsdetails',
+            query:{
+              id:item.product_id
+            }
+          }" 
+          tag="div" 
+          class="goodsDetailsLink" 
+          ></router-link>
         </div>
+          <router-view></router-view>
       </van-list>
   </div>
 </template>
@@ -60,6 +73,7 @@ export default {
       list: [],
       loading: false,
       finished: false,
+      page:2
     };
   },
   async mounted() {
@@ -74,13 +88,18 @@ export default {
   methods:{
     async onLoad() {
         let result=await this.$http.get({
-          url:'/data/mock'
+          url:'/api/product/filter_res',
+          params:{
+            page:this.page
+          }
         })
+        
         console.log(result) // TODO 拿到数据后，将列表数据合并，需要再声明一个变量
         result.data.filterData.forEach((item)=>{
           this.list.push(item)
         })
         this.loading = false
+        this.page++
       },
     },
 };
@@ -93,9 +112,16 @@ export default {
   .van-list 
     padding-left 12px
     .goods-item 
+      position relative
       overflow-y scroll
       padding-top 18px
       clear both
+      .goodsDetailsLink 
+        position absolute
+        top 0px 
+        right 0px 
+        width 100%
+        height 100%
       .lg
         float left 
         position relative
@@ -153,6 +179,9 @@ export default {
             position relative 
             top -1.5px
             img 
+              position relative 
+              top -1px
+              margin-right 1px
               widht 13px
               height 13px
               vertical-align center

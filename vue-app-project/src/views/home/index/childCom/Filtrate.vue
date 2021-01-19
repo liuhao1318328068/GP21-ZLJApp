@@ -80,6 +80,8 @@ export default {
   position sticky
   top 116px
   z-index 9999
+  text-align center
+  overflow-y visible
   div 
     height 38px
     flex 1

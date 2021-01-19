@@ -7,6 +7,7 @@ import Classify from "@/views/home/classify/Classify";
 import Sell from "@/views/home/sell/Sell"
 import Group from "@/views/home/group/Group"
 import Mine from "@/views/home/mine/Mine"
+import Goodsdetails from '@/views/home/index/childCom/Goodsdetails'
 
 Vue.use(Router);
 import VueRouter from "vue-router";
@@ -50,6 +51,11 @@ const routes = [
         component: Mine,
       }
     ]
+  },
+  {
+    path:'/goodsdetails',
+    name:'goodsdetails',
+    component:Goodsdetails
   }
 ];
 
