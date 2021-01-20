@@ -17,10 +17,10 @@
       <span class="span-icon">&#xe604;</span>
       <span class="span-text">卖手机</span>
     </van-tabbar-item>
-    <van-tabbar-item replace to="/home/group" class="nav-iconnn">
+    <!-- <van-tabbar-item replace to="/home/group" class="nav-iconnn">
       <span class="span-icon">&#xe76e;</span>
       <span class="span-text">超值拼团</span>
-    </van-tabbar-item>
+    </van-tabbar-item> -->
     <van-tabbar-item replace to="/home/mine" class="nav-iconnn">
       <span class="span-icon">&#xe735;</span>
       <span class="span-text">个人</span>
