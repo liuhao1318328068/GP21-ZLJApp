@@ -19,9 +19,6 @@ import Youhuiquan from "@/views/order/Youhuiquan"
 import Goodsdetails from '@/views/home/index/childCom/goodsdetails'
 
 Vue.use(Router);
-import VueRouter from "vue-router";
-
-Vue.use(VueRouter);
 
 const routes = [
   {
@@ -165,17 +162,17 @@ const routes = [
       {
         path: "sell",
         name:"sell",
-        component: Sell,
+        component: () => import("@/views/home/sell/Sell"),
       },
       {
         path: "group",
         name:"group",
-        component: Group,
+        component: () => import("@/views/home/group/Group"),
       },
       {
         path: "mine",
         name:"mine",
-        component: Mine,
+        component: () => import("@/views/home/mine/Mine"),
       }
     ]
   },
@@ -183,8 +180,57 @@ const routes = [
     path:'/goodsdetails',
     name:'goodsdetails',
     component:Goodsdetails
-  }
+  },
+  {
+    path: "/sellEntry",
+    name:"sellEntry",
+    component: () => import("@sell/SellEntry"),
+    children: [
+      {
+        path: "searchProduct",
+        name:"searchProduct",
+        component: () => import("@sell/SearchProduct"),
+      },
+      {
+        path: "redPacket",
+        name:"redPacket",
+        component: () => import("@sell/RedPacket"),
+      },
+      {
+        path: "sellClassify",
+        name:"sellClassify",
+        component: () => import("@sell/SellClassify"),
+      },
+      {
+        path: "recoverProcess",
+        name:"recoverProcess",
+        component: () => import("@sell/RecoverProcess"),
+      },
+      {
+        path: "moreHistory",
+        name:"moreHistory",
+        component: () => import("@sell/MoreHistory"),
+      },
+      {
+        path: "qualityReport",
+        name:"qualityReport",
+        component: () => import("@sell/QualityReport"),
+      },
+      {
+        path: "moreQuestions",
+        name:"moreQuestions",
+        component: () => import("@sell/MoreQuestions"),
+      },
+      {
+        path: "evaluate",
+        name:"evaluate",
+        component: () => import("@sell/Evaluate/index"),
+      },
+    ]
+  },
+  
 ];
+
 
 const router = new Router({
   mode: "history",
