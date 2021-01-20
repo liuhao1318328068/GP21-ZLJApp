@@ -16,6 +16,7 @@ import AddAddress from "@/views/order/address/AddAddress"
 import ShoppingCar from "@/views/shoppingCar/ShoppingCar"
 import Save from "@/views/order/Save"
 import Youhuiquan from "@/views/order/Youhuiquan"
+import Goodsdetails from '@/views/home/index/childCom/Goodsdetails'
 
 Vue.use(Router);
 import VueRouter from "vue-router";
@@ -177,6 +178,11 @@ const routes = [
         component: Mine,
       }
     ]
+  },
+  {
+    path:'/goodsdetails',
+    name:'goodsdetails',
+    component:Goodsdetails
   }
 ];
 

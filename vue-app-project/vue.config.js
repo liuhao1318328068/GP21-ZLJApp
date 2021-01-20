@@ -16,6 +16,13 @@ module.exports = {
         target: "https://jqa.zhaoliangji.com",
         changeOrigin: true,
       },
+      // "/data": {
+      //   target: "http://localhost:9000",
+      //   changeOrigin: true,
+      //   pathRewrite: {
+      //     '^/data': ''
+      //   }
+      // },
     },
   },
 };
