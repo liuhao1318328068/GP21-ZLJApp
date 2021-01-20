@@ -9,7 +9,7 @@
       <span class="span-icon">&#xe61d;</span>
       <span class="span-text">首页</span>
     </van-tabbar-item>
-    <van-tabbar-item replace to="/home/classify" class="nav-iconnn">
+    <van-tabbar-item replace to="/home/classify/1" class="nav-iconnn">
       <span class="span-icon">&#xe623;</span>
       <span class="span-text">分类</span>
     </van-tabbar-item>
