@@ -17,15 +17,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@/assets/stylus/border.styl';
+@import '~@/assets/stylus/border.styl'
 .wrap 
   display: flex;
   flex-direction: column;
   height: 100%;
   .main 
     flex: 1;
-    overflow-y scroll
-
   .tabbar 
     height: 0.48rem;
     border1px(1px 0 0 0, #d7d7d7);
