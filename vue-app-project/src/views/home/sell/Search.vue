@@ -8,15 +8,15 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { Search } from "vant";
-Vue.use(Search);
+import Vue from "vue"
+import { Search } from "vant"
+Vue.use(Search)
 
 export default {
   data() {
     return {
       value: "",
-    };
+    }
   },
 
   methods: {
@@ -24,7 +24,7 @@ export default {
       this.$router.push('/sellEntry/searchProduct')
     }
   },
-};
+}
 </script>
 <style lang='stylus' scoped>
 .van-search

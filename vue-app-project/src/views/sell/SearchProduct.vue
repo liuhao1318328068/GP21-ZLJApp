@@ -51,9 +51,9 @@
 import CommenHeader from "@/components/CommenHeader.vue"
 import { mapState, mapMutations, mapActions } from 'vuex'
 
-import Vue from "vue";
-import { Search } from "vant";
-Vue.use(Search);
+import Vue from "vue"
+import { Search } from "vant"
+Vue.use(Search)
 
 export default {
   data() {
@@ -61,7 +61,7 @@ export default {
       loading: true,
       value: "",
       hot_list: []
-    };
+    }
   },
 
   computed: {

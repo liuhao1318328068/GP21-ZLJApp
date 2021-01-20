@@ -21,34 +21,34 @@
 </template>
 
 <script>
-import SellBlockTop from "@/components/SellBlockTop.vue";
+import SellBlockTop from "@/components/SellBlockTop.vue"
 
-import Vue from "vue";
-import { Collapse, CollapseItem } from "vant";
+import Vue from "vue"
+import { Collapse, CollapseItem } from "vant"
 
-Vue.use(Collapse);
-Vue.use(CollapseItem);
+Vue.use(Collapse)
+Vue.use(CollapseItem)
 
 export default {
   props: ["hotQuestions"],
   data() {
     return {
       activeName: "1",
-    };
+    }
   },
   computed: {
     lookMore() {
       let lookMoreInfo = {
         name: "moreQuestions",
         url: this.hotQuestions.more_url,
-      };
-      return lookMoreInfo;
+      }
+      return lookMoreInfo
     },
   },
   components: {
     SellBlockTop,
   },
-};
+}
 </script>
 
 <style lang='stylus' scoped>

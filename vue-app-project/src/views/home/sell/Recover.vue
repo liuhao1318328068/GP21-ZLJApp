@@ -12,18 +12,18 @@
 </template>
 
 <script>
-import SellBlockTop from "@/components/SellBlockTop.vue";
+import SellBlockTop from "@/components/SellBlockTop.vue"
 export default {
   props: ["processInfo"],
   data() {
     return {
       lookMore: { name: "recoverProcess" },
-    };
+    }
   },
   components: {
     SellBlockTop,
   },
-};
+}
 </script>
 
 <style lang='stylus'>

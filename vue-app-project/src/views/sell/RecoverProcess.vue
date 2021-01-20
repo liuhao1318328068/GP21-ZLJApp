@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import CommenHeader from "@/components/CommenHeader.vue";
+import CommenHeader from "@/components/CommenHeader.vue"
 
 export default {
   data() {
     return {
       loading: true,
       processPage: "",
-    };
+    }
   },
   methods: {
     async loadData() {
@@ -32,7 +32,7 @@ export default {
   components: {
     CommenHeader,
   },
-};
+}
 </script>
 
 <style lang='stylus'>

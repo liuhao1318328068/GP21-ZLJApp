@@ -330,6 +330,7 @@ html, body
     right 0
     bottom .1rem
     margin auto
+    z-index 999
     background #ff1a1a
     color #fff
 </style>

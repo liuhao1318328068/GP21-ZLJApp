@@ -5,9 +5,6 @@ import Home from "@/views/Home";
 import Index from "@/views/home/index/Index"
 
 Vue.use(Router);
-import VueRouter from "vue-router";
-
-Vue.use(VueRouter);
 
 const routes = [
   {

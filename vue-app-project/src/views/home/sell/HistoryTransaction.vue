@@ -73,7 +73,7 @@ export default {
     SellBlockTop,
     SellHistorySection
   },
-};
+}
 </script>
 
 <style lang='stylus'>

@@ -10,14 +10,14 @@
 </template>
 
 <script>
-import SellBlockTop from "@/components/SellBlockTop.vue";
+import SellBlockTop from "@/components/SellBlockTop.vue"
 
 export default {
   props: ["whyChooseUs"],
   components: {
     SellBlockTop,
   },
-};
+}
 </script>
 
 <style lang='stylus' scoped>
