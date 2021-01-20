@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">
-      <router-link to="/home/mine" class="bcmine">&lt</router-link>
+      <router-link to="/home/mine" class="bcmine">&lt;</router-link>
       收货地址管理
     </div>
     <div class="addresslist">

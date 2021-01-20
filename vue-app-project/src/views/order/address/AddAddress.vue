@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="header">
-      <router-link to="/address/addressList" class="bcmine">&lt</router-link>
+      <router-link to="/address/addressList" class="bcmine">&lt;</router-link>
       新增收货地址
     </div>
     <van-address-edit

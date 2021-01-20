@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">
-      <div class="bcmine" @click="handeclick">&lt</div>
+      <div class="bcmine" @click="handeclick">&lt;</div>
       我的订单
     </div>
     <van-empty v-if="!list.length" description="哎呦，购物车空空如也" />

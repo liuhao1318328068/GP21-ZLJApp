@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">
-      <div class="bcmine" @click="handeclick">&lt</div>
+      <div class="bcmine" @click="handeclick">&lt;</div>
       我的收藏
     </div>
     <van-empty v-if="!list.length" description="还没有相关收藏呢" />

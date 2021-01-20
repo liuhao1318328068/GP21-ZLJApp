@@ -1,7 +1,7 @@
 <template>
   <div id="order">
     <div class="header">
-      <router-link to="/home/mine" class="bcmine">&lt</router-link>
+      <router-link to="/home/mine" class="bcmine">&lt;</router-link>
       我的订单
     </div>
     <van-tabs v-model="activeName">
