@@ -1,6 +1,6 @@
 <template>
   <div id="sellBanner">
-    <van-swipe class="box" :autoplay="3000">
+    <van-swipe class="box" :autoplay="3000" :touchable='false'>
       <van-swipe-item
         v-for="(image, index) in bannerInfo.banner_list"
         :key="index"

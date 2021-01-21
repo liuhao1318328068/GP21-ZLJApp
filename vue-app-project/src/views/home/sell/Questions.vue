@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box" id="questions">
     <SellBlockTop
       :title="hotQuestions.title"
       :look-more-title="'更多回收问题'"
@@ -59,6 +59,8 @@ export default {
 
   .van-collapse-item--border::after
     border none
+  
+
 
   .sell-iconnn
     font-size 0.15rem
@@ -66,4 +68,16 @@ export default {
     line-height 0.47rem
     text-align center
     color #b2b2b2
+</style>
+
+<style lang="stylus">
+#questions
+  .van-cell
+    font-size .14rem
+    line-height .24rem
+    
+    .van-cell__right-icon
+      font-size .16rem
+      height .24rem
+      line-height .24rem
 </style>
