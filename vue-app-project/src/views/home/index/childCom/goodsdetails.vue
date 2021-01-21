@@ -14,10 +14,10 @@
       <div class="goods-price">
         ￥<strong v-if="goodsData.price">{{goodsData.price}}</strong><i>新机价￥</i><em v-if="goodsData.ori_price">{{goodsData.ori_price}}</em><b>立省</b><span>￥{{goodsData.gap_price}}</span>
       </div>
-      <div class="good-coupon">
+      <div class="good-coupon" v-if="tagName">
         <p>
           <span><van-icon name="gold-coin" color="#fe1a19" /></span>
-          <em v-if="tagName">{{tagName}}</em>
+          <em>{{tagName}}</em>
         </p>
         <h4>立即领卷<span></span></h4>
       </div>
