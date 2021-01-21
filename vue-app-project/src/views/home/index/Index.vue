@@ -8,6 +8,7 @@
           shape="round"
           background="red"
           placeholder="请输入搜索关键词"
+          @click="toSearch"
           />
       </header>
       <div class="banner"> <!-- banner图 -->
@@ -127,31 +128,10 @@ export default {
       Filtrate,
       TabTags,
     },
-    computed:{
-        // url0(){
-        //     return bannerList[0].banner_image_url
-        // },
-        // url1(){
-        //     return bannerList[1].banner_image_url
-        // }
-    },
-    watch:{
-        // bannerList:{
-        //     handler(arr){
-        //         this.url0=arr[0].banner_image_url
-        //         this.url1=arr[1].banner_image_url
-        //     },
-        //     deep:true
-        // }
-    },
-    
     methods:{
-      // getContainer(){
-      //   return document.querySelector('.main');
-      // }
-//         hanldeClick(){
-// @click="hanldeClick"
-//         }
+      toSearch() {
+        this.$router.push('/sellEntry/searchProduct')
+      }
     },
 
 }

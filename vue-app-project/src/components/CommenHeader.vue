@@ -15,7 +15,8 @@ export default {
   props: ["back", "title"],
   methods: {
     hisBack() {
-      this.$router.push('/home/sell')
+      // this.$router.push('/home/sell')
+      history.back()
     }
   },
 }
