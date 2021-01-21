@@ -75,33 +75,33 @@ export default {
 <style lang="stylus" scoped>
 .main 
   display flex
-  height 38px
+  height 0.38rem
   background-color white
   position sticky
-  top 116px
+  top 1.16rem
   z-index 9999
   text-align center
   overflow-y visible
   div 
-    height 38px
+    height 0.38rem
     flex 1
   .top-box2
     text-align right 
-    font-size 12px
-    line-height 38px
+    font-size 0.12rem
+    line-height 0.38rem
     .van-cell--clickable 
-      matgin-top -5px
+      matgin-top -0.05rem
     .van-cell__right-icon
-      font-size: 12px
-      margin-left: 2px
+      font-size: 0.12rem
+      margin-left: 0.02rem
 
 </style>
 <style lang="stylus">
 #ldh_box1
   .van-dropdown-menu__bar
-    height 38px
+    height 0.38rem
     .van-ellipsis
-      font-size 12px
+      font-size 0.12rem
       text-align right
 </style>
 

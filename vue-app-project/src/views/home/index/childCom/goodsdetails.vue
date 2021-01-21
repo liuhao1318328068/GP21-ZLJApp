@@ -155,122 +155,122 @@ export default {
 .arrow-box
   position: fixed
   z-index 999
-  top 33px
-  left 18px
-  width 27px
-  height 27px
-  border-radius 14px
+  top 0.33rem
+  left 0.18rem
+  width 0.27rem
+  height 0.27rem
+  border-radius 0.14rem
   background #686866
   .arrow
     display block
     font-family "宋体"
     text-align center
-    width 27px
-    height 27px
-    line-height 27px
-    font-size .22rem
+    width 0.27rem
+    height 0.27rem
+    line-height 0.27rem
+    font-size 22px
     color #fff
     position relative 
-    left -2px
+    left -0.02rem
 .goods-banner 
   img 
-    width: 375px;
-    height: 375px;
+    width: 3.75rem;
+    height: 3.75rem;
   .custom-indicator 
     position: absolute
     right: 50% 
-    bottom: 20px
+    bottom: 0.2rem
     transform translateX(50%)
-    width 86px
-    height 32px
-    font-size: 12px
+    width 0.86rem
+    height 0.32rem
+    font-size: 0.12rem
     background: #ff3d3d
-    border-radius 16px
-    line-height 32px
+    border-radius 0.16rem
+    line-height 0.32rem
     text-align center
     color #fffcfd
 .info
-  padding 0 16px
+  padding 0 0.16rem
   background-color #ffffff
 .good-coupon
-  height 33px
+  height 0.33rem
   background-color #fff7f5
-  padding 5px
+  padding 0.05rem
   color #ff2827
-  // line-height 33px
+  // line-height 0.33rem
   p 
-    // width 100px
-    // height 20px
-    padding 1px 5px 
-    line-height 20px
+    // width 1rem
+    // height 0.2rem
+    padding 0.01rem 0.05rem 
+    line-height 0.2rem
     text-align center
     color #fe1a19
-    border 1px solid #fe1a19
-    border-radius 3px
+    border 0.01rem solid #fe1a19
+    border-radius 0.03rem
     float left
-    font-size 12px
+    font-size 0.12rem
     span 
-      margin-right 5px
+      margin-right 0.05rem
       position relative
-      top 1px
+      top 0.01rem
   h4 
     float right
     font-weight 400
     position relative
-    padding-right 24px
+    padding-right 0.24rem
     span 
-      width: 7px;
-      height: 7px;
-      border-top: 2px solid #fe1a19;
-      border-right: 2px solid #fe1a19;
+      width: 0.07rem;
+      height: 0.07rem;
+      border-top: 0.02rem solid #fe1a19;
+      border-right: 0.02rem solid #fe1a19;
       transform: rotate(45deg);
       position: absolute;
-      right: 10px;
-      top 7px
+      right: 0.1rem;
+      top 0.07rem
 .goods-price
   background-color #ffffff
-  // padding 0 16px
-  height 70px
-  line-height 70px
+  // padding 0 0.16rem
+  height 0.7rem
+  line-height 0.7rem
   color #fe1a19
-  font-size 14px
+  font-size 0.14rem
   strong
-    font-size 22px
-    padding-right 9px
+    font-size 0.22rem
+    padding-right 0.09rem
   i 
     color #999999
-    font-size 12px
+    font-size 0.12rem
   em 
     text-decoration line-through
     color #999999
-    font-size 12px
-    padding-right 5px
+    font-size 0.12rem
+    padding-right 0.05rem
     
   b 
     color #262626
     font-weight 400
 .good-title
-  // padding 0 16px
+  // padding 0 0.16rem
   background-color #ffffff
   h3 
-    font-size 12px
-    line-height 24px
-    padding-top 5px
+    font-size 0.12rem
+    line-height 0.24rem
+    padding-top 0.05rem
     font-weight 400
-    margin-bottom 5px
+    margin-bottom 0.05rem
     span 
-      margin-right 7px
+      margin-right 0.07rem
   p 
-    font-size 12px
+    font-size 0.12rem
     // transform scale(0.75)
     color #666666
-    padding-bottom 9px
+    padding-bottom 0.09rem
 
 .goods-nav
   .van-goods-action-button--first,.van-goods-action-button--last
-    border-radius 5px
-    margin-left 5px
+    border-radius 0.05rem
+    margin-left 0.05rem
   // .van-goods-action-button
-  //   height 44px
+  //   height 0.44rem
 
 </style>
