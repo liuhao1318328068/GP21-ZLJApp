@@ -14,6 +14,7 @@ import Address from "@/views/order/Address"
 import AddressList from "@/views/order/address/AddressList"
 import AddAddress from "@/views/order/address/AddAddress"
 import ShoppingCar from "@/views/shoppingCar/ShoppingCar"
+import Payment from "@/views/payment/Payment"
 import Save from "@/views/order/Save"
 import Youhuiquan from "@/views/order/Youhuiquan"
 import Goodsdetails from '@/views/home/index/childCom/Goodsdetails'
@@ -27,8 +28,13 @@ const routes = [
   },
   {
     path:"/shoppingCar",
-    // name:"shoppingCar",
+    name:"shoppingCar",
     component: ShoppingCar
+  },
+  {
+    path:"/payment",
+    name:"payment",
+    component: Payment
   },
   {
     // Address

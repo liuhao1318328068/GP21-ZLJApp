@@ -39,7 +39,7 @@
         <van-goods-action-icon :icon="iconType" :text="iconText" :color="iconColor" @click="addCollections(goodsData,$event)" />
         <van-goods-action-icon icon="cart-o" text="购物车" :badge="$store.state.addCarts.carts.length || '' " @click="clickHandle" />
         <van-goods-action-button :color="btnColor" :text="btnText" :disabled="btnBool" @click="addcarts(goodsData)" />
-        <van-goods-action-button color="#ff1b1a" text="立即购买" />
+        <van-goods-action-button color="#ff1b1a" text="立即购买" @click="toPayment" />
       </van-goods-action>
     </div>
   </div>
@@ -137,6 +137,12 @@ export default {
     },
     clickHandle(){
       this.$router.push("/shoppingCar")
+    },
+    toPayment(){
+      this.$router.push({
+        name: 'payment',
+        params: { data:[this.goodsData] }
+      })
     }
   },
 };
