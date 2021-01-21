@@ -55,7 +55,7 @@ Vue.use(Search).use(Tab).use(Tabs).use(TreeSelect)
 
 export default {
   mixins: [evaluate],
-  
+
   data() {
     return {
       activeName: '1',
