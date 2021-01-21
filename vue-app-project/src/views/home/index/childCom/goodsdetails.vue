@@ -1,5 +1,11 @@
 <template>
   <div class="goods-details">
+    <div 
+      class="arrow-box"
+      @click="hisBack"
+    >
+      <span class="arrow">&lt;</span>
+    </div>
     <van-swipe :autoplay="3000" class="goods-banner" @change="onChange">
       <van-swipe-item v-for="(image, index) in images" :key="index">
         <img v-lazy="image" />
@@ -30,10 +36,10 @@
     <div class="goods-nav">
       <van-goods-action>
         <van-goods-action-icon icon="chat-o" text="客服"  />
-        <van-goods-action-icon icon="like-o" text="收藏"  />
-        <van-goods-action-icon icon="cart-o" text="购物车" />
-        <van-goods-action-button color="#262626" text="加入购物车" />
-        <van-goods-action-button color="#ff1b1a" :text="'领卷购买卷后￥4000'" />
+        <van-goods-action-icon :icon="iconType" :text="iconText" :color="iconColor" @click="addCollections(goodsData,$event)" />
+        <van-goods-action-icon icon="cart-o" text="购物车" :badge="$store.state.addCarts.carts.length || '' " @click="clickHandle" />
+        <van-goods-action-button :color="btnColor" :text="btnText" :disabled="btnBool" @click="addcarts(goodsData)" />
+        <van-goods-action-button color="#ff1b1a" text="立即购买" />
       </van-goods-action>
     </div>
   </div>
@@ -41,11 +47,13 @@
 
 <script>
 import Vue from "vue";
+import { mapState, mapMutations, mapActions } from 'vuex'
 import { Swipe, SwipeItem, Lazyload,GoodsAction, GoodsActionIcon, GoodsActionButton,Icon } from "vant";
 
 Vue.use(Swipe).use(SwipeItem).use(Lazyload).use(GoodsAction).use(GoodsActionButton).use(GoodsActionIcon).use(Icon)
 
 export default {
+  // $store.state.addCarts.carts.length
   data() {
     return {
       images: [
@@ -54,9 +62,17 @@ export default {
       current: 0,
       goodsData:'',
       tagName:'',
+      iconType:'like-o',
+      iconText:'收藏',
+      iconColor:'',
+      // iconBool:false,
+      btnText:'加入购物车',
+      btnColor:'#262626',
+      btnBool:false
     };
   },
   async mounted() {
+    // console.log(this.$store.state)
     // console.log(this.$route.query.id)
     let result = await this.$http.get({ // 轮播图、网格布局、盲盒数据
       url:'api/product/detail',
@@ -66,15 +82,62 @@ export default {
         x_app_version:'8.3.21'
       }
     });
-    console.log(result)
+    // console.log(result)
     this.goodsData=result.data
     this.images=result.data.slide_pic_index[0].imgs
     this.tagName=result.data.tags.feature_tag[0].tag_name
+
+    let { goodsCollect,addCarts } =this.$store.state
+
+    let iconFind=goodsCollect.collections.find(item=>{
+      return item.product_id==result.data.product_id
+    })
+    if(iconFind){
+      this.iconType='like',
+      this.iconText="已收藏",
+      this.iconColor="#ff0000"
+    }
+
+    let btnFind=addCarts.carts.find(item=>{
+      return item.product_id==result.data.product_id
+    })
+    if(btnFind){
+      this.btnBool=true;
+      this.btnText="已加入购物车";
+      this.btnColor="#b4b4b4"
+    }
   },
   methods: {
     onChange(index) {
       this.current = index;
     },
+    hisBack() {
+      history.back()
+    },
+    // ...mapActions('goodsCollect', ['addCollections'])
+    // ...mapActions('addCarts', ['addcarts']),
+    addCollections(data,e){
+      // console.log(e)
+      if(!this.iconColor){
+        this.iconType='like',
+        this.iconText="已收藏",
+        this.iconColor="#ff0000"
+      }else{
+        this.iconType='like-o',
+        this.iconText="收藏",
+        this.iconColor=""
+      }
+      this.$store.dispatch("goodsCollect/addCollections",data)
+    },
+    addcarts(data){
+      this.btnBool=true;
+      this.btnText="已加入购物车";
+      this.btnColor="#b4b4b4"
+      this.$store.dispatch("addCarts/addcarts",data)
+    },
+    clickHandle(){
+      this.$router.push("/shoppingCar")
+    }
   },
 };
 </script>
@@ -83,6 +146,26 @@ export default {
 .goods-details
   height 100%
   background-color #f5f5f5
+.arrow-box
+  position: fixed
+  z-index 999
+  top 33px
+  left 18px
+  width 27px
+  height 27px
+  border-radius 14px
+  background #686866
+  .arrow
+    display block
+    font-family "宋体"
+    text-align center
+    width 27px
+    height 27px
+    line-height 27px
+    font-size .22rem
+    color #fff
+    position relative 
+    left -2px
 .goods-banner 
   img 
     width: 375px;

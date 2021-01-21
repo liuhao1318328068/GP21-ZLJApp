@@ -16,7 +16,7 @@ import AddAddress from "@/views/order/address/AddAddress"
 import ShoppingCar from "@/views/shoppingCar/ShoppingCar"
 import Save from "@/views/order/Save"
 import Youhuiquan from "@/views/order/Youhuiquan"
-import Goodsdetails from '@/views/home/index/childCom/goodsdetails'
+import Goodsdetails from '@/views/home/index/childCom/Goodsdetails'
 
 Vue.use(Router);
 
@@ -27,7 +27,7 @@ const routes = [
   },
   {
     path:"/shoppingCar",
-    name:"shoppingCar",
+    // name:"shoppingCar",
     component: ShoppingCar
   },
   {
