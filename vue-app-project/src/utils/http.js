@@ -3,7 +3,7 @@ import axios from "axios";
 class Http {
   constructor() {
     this.instance = axios.create({
-      baseURL: "http://localhost:8080",
+      baseURL: "http://47.110.234.132",
       timeout: 60000,
     });
   }
