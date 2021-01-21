@@ -147,8 +147,12 @@ export default {
 #sellClassify
   height 100%
   padding-top .4rem
+  display flex
+  flex-direction column
   .van-tabs
-    height 5.73rem
+    flex 1
+    display flex
+    flex-direction column
     .van-tree-select__content
       li
         display flex
@@ -168,7 +172,6 @@ export default {
             font-size .12rem
             flex 1
           .modelPrice
-            width .6rem
             height .61rem
             margin-left .1rem
             display flex
@@ -212,12 +215,14 @@ export default {
     border1px(0 0 1px, #e8e8e8)
     box-shadow 0 1px 1px #f0f0f0
   .van-tabs__content
-    height 5.29rem
+    flex 1
     .van-tab__pane
       height 100%
+      display flex
+      flex-direction column
       
       .van-tree-select
-        height 100% !important
+        flex 1
         .van-tree-select__nav
           .van-tree-select__nav-item
             padding .16rem 0

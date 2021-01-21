@@ -53,6 +53,13 @@ export default {
       p
         color #999
         font-size .1rem
+    &:first-child img
+      width .32rem
+      height .44rem
+    &:nth-child(2) img
+      width .43rem
+      height .41rem
+
   .line
     width .02rem
     height .4rem

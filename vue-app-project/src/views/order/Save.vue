@@ -1,54 +1,65 @@
 <template>
   <div>
     <div class="header">
-      <div class="bcmine" @click="handeclick">&lt</div>
+      <div class="bcmine" @click="handeclick">&lt;</div>
       我的收藏
     </div>
-    <van-empty v-if="!list.length" description="还没有相关收藏呢" />
-    
-    <div v-for="(elem,i) in list" :key="elem+i">
-      <van-swipe-cell>
-        <van-card
-          num="1"
-          price="1198.00"
-          desc="备注信息"
-          title="iPhone 8"
-          thumb="http://cdn.huodao.hk/upload_img/20191108/15a0bb69c07bd6f3739a20f154e557f6.jpg"
-        >
-        </van-card>
-        <template #right>
-          <van-button square text="删除" type="danger" class="delete-button" />
-        </template>
-      </van-swipe-cell>
-    </div>
+    <van-empty v-if="!collections.length" description="还没有任何收藏呢" />
+    <!-- <van-checkbox-group v-model="result" ref="checkboxGroup" > -->
+      <div v-for="elem in collections" :key="elem.product_id">
+        <van-swipe-cell>
+          <van-card
+            :thumb="elem.slide_pic_index[0].imgs[0]"
+            :title="elem.alert_product_name"
+            :price="elem.price.toFixed(2)"
+            v-if="elem.slide_pic_index"
+          >
+          </van-card>
+          <template #right>
+            <van-button square text="删除" type="danger" class="delete-button" @click="deletcollections(elem.product_id)" />
+          </template>
+        </van-swipe-cell>
+      </div>
   </div>
 </template>
 
 <script>
-import Vue from "vue";
-import { Empty } from "vant";
-import { SwipeCell } from "vant";
-import { Card } from "vant";
+import Vue from "vue"
+import { Card,Empty,SubmitBar,Checkbox,CheckboxGroup,SwipeCell } from "vant"
+import { mapState, mapMutations, mapActions } from 'vuex'
 
-Vue.use(Card);
+Vue.use(Card).use(SwipeCell).use(Checkbox).use(CheckboxGroup).use(SubmitBar).use(Empty)
 
-Vue.use(SwipeCell);
-
-Vue.use(Empty);
 export default {
   data() {
     return {
       checked: false,
-      list: [1, 2, 3],
+      result:[],
     };
+  },
+  mounted() {
   },
   methods: {
     handeclick() {
-      return history.back();
+      history.back();
+    },
+    deletcollections(id){
+      this.$store.dispatch("goodsCollect/deletCollections",id)
+      let index = this.result.indexOf(id)
+      if(index>-1) this.result.splice(index,1)
     },
   },
   computed: {
-    
+    price() {
+      let { collections } = this.$store.state.goodsCollect
+      let arr=collections.filter(item=>{
+        return this.result.indexOf(item.product_id)>-1
+      })
+      return arr.reduce((value,item)=>{
+        return value+=item.price
+      },0)
+    },
+    ...mapState('goodsCollect', ['collections'])
   },
 };
 </script>
