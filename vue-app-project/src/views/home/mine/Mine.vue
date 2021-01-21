@@ -43,7 +43,7 @@
                     <div class="ceyice-text-wrap">
                         <div class="ceyice-text"><span>{{price_title}}</span><p>{{re_money}}</p></div>
                         <div class="small-pinpai"><span>{{is_local_text}}</span><p>{{model_name}}</p></div>
-                        <div class="ceyice-button" >测一测</div>
+                        <div class="ceyice-button" @click="toEvaluate(model_id)">测一测</div>
                     </div>
                 </div>
             </div>
@@ -89,16 +89,18 @@
 </template>
 
 <script>
-
+import evaluate from '@/mixins/evaluate'
 
 export default {
+mixins: [evaluate],
 data(){
     return{
         is_local_text:"",
         price_title:"",
         re_money:"",
         model_name:"",
-        model_img:""
+        model_img:"",
+        model_id: ''
     }
 },
 watch: {
@@ -118,6 +120,7 @@ async mounted() {
     this.price_title=result.data.price_title
     this.re_money=result.data.re_money
     this.model_name=result.data.model_name
+    this.model_id=result.data.model_id
 }
 }
 </script>

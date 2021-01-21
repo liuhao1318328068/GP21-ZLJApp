@@ -1,6 +1,9 @@
 <template>
   <div id="sellClassify">
-    <CommenHeader :back="1" :title="'分类'"></CommenHeader>
+    <header>
+      <van-icon name="arrow-left" @click="hisBack"/>
+      分类
+    </header>
     <div class="searchContainer">
       <van-search
         placeholder="搜索您要卖的机型"
@@ -47,11 +50,10 @@
 
 <script>
 import evaluate from '@/mixins/evaluate'
-import CommenHeader from "@/components/CommenHeader.vue"
 import Vue from "vue"
-import { Search, Tab, Tabs, TreeSelect } from "vant"
+import { Icon, Search, Tab, Tabs, TreeSelect } from "vant"
 
-Vue.use(Search).use(Tab).use(Tabs).use(TreeSelect)
+Vue.use(Icon).use(Search).use(Tab).use(Tabs).use(TreeSelect)
 
 export default {
   mixins: [evaluate],
@@ -70,6 +72,10 @@ export default {
   },
 
   methods: {
+    hisBack() {
+      this.$router.push('/home/sell')
+    },
+    
     async getCategory() {
       let result = await this.$http.get({
         url: "/evaluate/get_category",
@@ -134,10 +140,6 @@ export default {
       })
     },
   },
-  
-  components: {
-    CommenHeader
-  }
 }
 </script>
 
@@ -149,6 +151,24 @@ export default {
   padding-top .4rem
   display flex
   flex-direction column
+  header 
+    background #fff
+    color #000
+    font-size .16rem
+    font-weight: 700;
+    height .4rem
+    line-height .4rem
+    text-align center
+    position fixed
+    top 0
+    width 100%
+    z-index 9999
+    .van-icon
+      position absolute
+      left .17rem
+      top .12rem
+      font-size .16rem
+      font-weight: 700;
   .van-tabs
     flex 1
     display flex
