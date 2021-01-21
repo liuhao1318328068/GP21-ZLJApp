@@ -43,7 +43,7 @@
                     <div class="ceyice-text-wrap">
                         <div class="ceyice-text"><span>{{price_title}}</span><p>{{re_money}}</p></div>
                         <div class="small-pinpai"><span>{{is_local_text}}</span><p>{{model_name}}</p></div>
-                        <div class="ceyice-button">测一测</div>
+                        <div class="ceyice-button" >测一测</div>
                     </div>
                 </div>
             </div>
@@ -89,6 +89,8 @@
 </template>
 
 <script>
+
+
 export default {
 data(){
     return{

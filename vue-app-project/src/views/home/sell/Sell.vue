@@ -123,6 +123,9 @@ export default {
   background rgb(246,248,250)
   padding .4rem 0 .65rem
   position relative
+  .content
+    height 5.8rem
+    overflow-y scroll 
   
   .van-loading
     height 100%
