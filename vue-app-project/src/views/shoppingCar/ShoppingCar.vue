@@ -61,7 +61,15 @@ export default {
   methods: {
     onSubmit() {
       // console.log(0);
-      console.log(this.result)
+      // console.log(this.result)
+      let { carts } = this.$store.state.addCarts
+      let data=carts.filter(item=>{
+        return this.result.indexOf(item.product_id)>-1
+      })
+      this.$router.push({
+        name: 'payment',
+        params: { data }
+      })
     },
     handeclick() {
       history.back();
