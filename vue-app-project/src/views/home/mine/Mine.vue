@@ -100,7 +100,7 @@ data(){
         re_money:"",
         model_name:"",
         model_img:"",
-        model_id: ''
+        model_id:""
     }
 },
 watch: {

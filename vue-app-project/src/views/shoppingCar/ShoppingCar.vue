@@ -41,10 +41,10 @@
 
 <script>
 import Vue from "vue"
-import { Card,Empty,SubmitBar,Checkbox,CheckboxGroup,SwipeCell } from "vant"
+import { Card,Empty,SubmitBar,Checkbox,CheckboxGroup,SwipeCell,Toast } from "vant"
 import { mapState, mapMutations, mapActions } from 'vuex'
 
-Vue.use(Card).use(SwipeCell).use(Checkbox).use(CheckboxGroup).use(SubmitBar).use(Empty)
+Vue.use(Card).use(SwipeCell).use(Checkbox).use(CheckboxGroup).use(SubmitBar).use(Empty).use(Toast)
 
 export default {
   data() {
@@ -61,7 +61,19 @@ export default {
   methods: {
     onSubmit() {
       // console.log(0);
-      console.log(this.result)
+      // console.log(this.result)
+      let { carts } = this.$store.state.addCarts
+      let data=carts.filter(item=>{
+        return this.result.indexOf(item.product_id)>-1
+      })
+      if(data.length===0){
+        Toast('请选择商品')
+      }else{
+        this.$router.push({
+          name: 'payment',
+          params: { data }
+        })
+      }
     },
     handeclick() {
       history.back();
