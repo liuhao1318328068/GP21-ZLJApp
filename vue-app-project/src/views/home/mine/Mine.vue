@@ -92,9 +92,7 @@
 import evaluate from '@/mixins/evaluate'
 
 export default {
-     mixins: [evaluate],
-
-  props: ["lastLocalModel"],
+mixins: [evaluate],
 data(){
     return{
         is_local_text:"",

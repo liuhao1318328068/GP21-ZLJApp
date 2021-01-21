@@ -17,7 +17,7 @@ import ShoppingCar from "@/views/shoppingCar/ShoppingCar"
 import Payment from "@/views/payment/Payment"
 import Save from "@/views/order/Save"
 import Youhuiquan from "@/views/order/Youhuiquan"
-import Goodsdetails from '@/views/home/index/childCom/Goodsdetails'
+import Goodsdetails from '@/views/home/index/childCom/goodsdetails'
 
 Vue.use(Router);
 
