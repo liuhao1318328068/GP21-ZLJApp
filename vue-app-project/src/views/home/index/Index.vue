@@ -145,131 +145,131 @@ main
   background #f5f5f5
   .bg-header 
     width 100%
-    height 143px
+    height 1.43rem
     background red
-    border-radius: 0 0 25px 25px
+    border-radius: 0 0 0.25rem 0.25rem
    header
-    height 116px
+    height 1.16rem
     width 100%
     background red
     position fixed
     top 0
     z-index 999
     p
-        height 64px
+        height 0.64rem
         color white
-        font-size 17px
+        font-size 0.17rem
         text-align center
-        line-height 84px
+        line-height 0.84rem
   .my-swipe .van-swipe-item 
     color: #fff;
-    font-size: 20px;
-    line-height: 150px;
+    font-size: 0.2rem;
+    line-height: 1.5rem;
     text-align: center;
     background-color: #39a9ed
   .banner
-    width 351px
-    height 103px
+    width 3.51rem
+    height 1.03rem
     margin auto
-    margin-top -27px
-    border-radius 8px
+    margin-top -0.27rem
+    border-radius 0.08rem
     img 
-      width 351px
-      height 103px
+      width 3.51rem
+      height 1.03rem
       vertical-align top
   section 
-    width 351px
-    height 124px
-    margin 0 auto 12px
+    width 3.51rem
+    height 1.24rem
+    margin 0 auto 0.12rem
     background-color white 
-    border-radius: 9px
+    border-radius: 0.09rem
     display flex
     .box1 
       flex 1
-      border-right 2px solid #f5f5f5
-      padding-left 12px
+      border-right 0.02rem solid #f5f5f5
+      padding-left 0.12rem
       h2 
-        font-size 14px
-        line-height 15px
-        margin-top 13px
+        font-size 0.14rem
+        line-height 0.15rem
+        margin-top 0.13rem
         img 
-          width 48px
-          height 14px
-          margin-left 9px
+          width 0.48rem
+          height 0.14rem
+          margin-left 0.09rem
           vertical-align middle
-          margin-top -3px
+          margin-top -0.03rem
         span  
-          width 68px
-          margin-left 8px
+          width 0.68rem
+          margin-left 0.08rem
           background-color #ff2c4c
-          height 12px
-          font-size 10px
+          height 0.12rem
+          font-size 0.1rem
           color white 
           font-weight normal
-          padding 2px 3px
-          border-radius 2px
+          padding 0.02rem 0.03rem
+          border-radius 0.02rem
           transform scale(0.5,0.5)
       p 
         color #777777
-        font-size 12px
-        margin-top 6px
-        line-height 12px
+        font-size 0.12rem
+        margin-top 0.06rem
+        line-height 0.12rem
       img
-        width 65px
-        height 65px
-        margin-top 10px
+        width 0.65rem
+        height 0.65rem
+        margin-top 0.1rem
         vertical-align top
-        margin-right 15px
+        margin-right 0.15rem
       .img1
-        margin-top 4px
-        margin-right 10px
+        margin-top 0.04rem
+        margin-right 0.1rem
       .gt
         display inline-block
-        margin-left -3px
-        padding-top 10px
+        margin-left -0.03rem
+        padding-top 0.1rem
         span 
-          font-size 12px
+          font-size 0.12rem
           color #8d8d8d
           i 
             color #262626
-            font-size 12px
+            font-size 0.12rem
           b 
-            font-size 16px
+            font-size 0.16rem
             color #262626
             font-weight normal
         p 
-          width 28px
-          height 14px
+          width 0.28rem
+          height 0.14rem
           color white 
           background-color #999999
-          line-height 14px
-          font-size 12px
+          line-height 0.14rem
+          font-size 0.12rem
           text-align center 
           margin-top 0
-          border-radius: 1px
+          border-radius: 0.01rem
         h3 
           color #666666
           font-weight 400
           
 
 .van-search__content--round
-    border-radius 8px
+    border-radius 0.08rem
 .banner .my-swipe,.banner .van-swipe
-    height 103px
-    border-radius 8px
+    height 1.03rem
+    border-radius 0.08rem
 .sellBanner 
   .notice-swipe 
-    height: 40px;
-    line-height: 40px;
+    height: 0.4rem;
+    line-height: 0.4rem;
   .van-notice-bar
-    height: 18px;
+    height: 0.18rem;
     padding: 0 
     color: #777777
-    font-size: 12px
-    line-height: 24px
+    font-size: 0.12rem
+    line-height: 0.24rem
     background-color: white; 
   .van-image
-    top 2px
+    top 0.02rem
 
     
 </style>
@@ -278,7 +278,7 @@ main
   background-color transparent 
   overflow-y visible
   i 
-    font-size 50px 
-    bottom -82px
-    left 92px
+    font-size 0.5rem 
+    bottom -0.82rem
+    left 0.92rem
 </style>

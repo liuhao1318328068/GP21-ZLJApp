@@ -97,67 +97,67 @@ export default {
   .main
     background-color #f5f5f5
     height 100%
-    padding 12px
+    padding 0.12rem
     .pay-goods
       background-color #fff
-      border-radius 8px
+      border-radius 0.08rem
       h2
-        height 42px
-        line-height 42px
-        text-indent 12px
-        font-size 16px
-        border-bottom 1px solid #eeeeee
+        height 0.42rem
+        line-height 0.42rem
+        text-indent 0.12rem
+        font-size 0.16rem
+        border-bottom 0.01rem solid #eeeeee
       .pay-box
-        padding 12px
+        padding 0.12rem
         overflow hidden
         .title
           overflow hidden
-          border-bottom 1px solid #eeeeee
-          padding-bottom 12px
+          border-bottom 0.01rem solid #eeeeee
+          padding-bottom 0.12rem
           img 
-            width 80px
-            height 80px
+            width 0.8rem
+            height 0.8rem
             float left
           .title-right
             float left
-            margin-left 8px
+            margin-left 0.08rem
             .pay-tag
-              margin-top 5px
+              margin-top 0.05rem
               span 
-                font-size 12px
+                font-size 0.12rem
                 color #f71d1e
                 display inline-block
                 background-color #fff3f3
-                padding 2px 4px
-                border-radius 3px 
-                margin-right 10px
+                padding 0.02rem 0.04rem
+                border-radius 0.03rem 
+                margin-right 0.1rem
             .pay-price
-              margin-top 6px
+              margin-top 0.06rem
               color #ff191b
-              font-size 12px
+              font-size 0.12rem
               span 
-                font-size 18px
+                font-size 0.18rem
                 font-weight 600
               em 
                 float right 
-                height 27px
-                line-height 27px
-                font-size 18px
+                height 0.27rem
+                line-height 0.27rem
+                font-size 0.18rem
                 color #000
                 position relative 
-                top -1px
+                top -0.01rem
         .subtotal   
-          // height 40px
-          // line-height 52px
-          margin-top 15px
-          margin-bottom 5px
+          // height 0.4rem
+          // line-height 0.52rem
+          margin-top 0.15rem
+          margin-bottom 0.05rem
           p
             float right    
           b
             float right     
             color #b2b2b2
             font-weight 400
-            margin-right 5px
+            margin-right 0.05rem
 .van-submit-bar__text
   text-align left
 </style>

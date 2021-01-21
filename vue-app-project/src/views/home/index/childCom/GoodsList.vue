@@ -109,90 +109,90 @@ export default {
 @import '~@/assets/stylus/ellipsis.styl'
 #goods-list
   background-color white
+  margin-top 0.04rem
   .van-list 
-    padding-left 12px
+    padding-left 0.12rem
     .goods-item 
       position relative
       overflow-y scroll
-      padding-top 18px
+      padding-top 0.18rem
       clear both
       .goodsDetailsLink 
         position absolute
-        top 0px 
-        right 0px 
+        top 0rem 
+        right 0rem 
         width 100%
         height 100%
       .lg
         float left 
         position relative
-        margin-right 8px
+        margin-right 0.08rem
         img 
-          width 80px
-          height 80px
+          width 0.8rem
+          height 0.8rem
           display block
-          border-radius 3px
+          border-radius 0.03rem
         p 
           position absolute
-          width 77px
-          height 20px 
+          width 0.77rem
+          height 0.2rem 
           background-color #fd5f50
-          border-radius 0px 10px 0px 0px
+          border-radius 0rem 0.1rem 0rem 0rem
           color white 
           bottom 0
-          line-height 20px
-          // padding-left 1px
-          text-indent 2px
+          line-height 0.2rem
+          // padding-left 0.01rem
+          text-indent 0.02rem
           span 
             display inline-block
-            font-size 12px
+            font-size 0.12rem
             transform scale(0.75)
-            text-indent -2px
+            text-indent -0.02rem
       .rg 
         float left 
-        width 263px
+        width 2.63rem
         font-weight 300
-        font-size 12px
+        font-size 0.12rem
         h2 
           ellipsis()
           img 
-            width 33px
-            height 14px
-            margin-right 4px
+            width 0.33rem
+            height 0.14rem
+            margin-right 0.04rem
         p 
-          font-size 12px
+          font-size 0.12rem
           color #000
           transform scale(0.8)
           font-weight 700
-          text-indent -30px
+          text-indent -0.3rem
         h3 
           color #ff191a
-          font-size 18px
-          line-height 18px
+          font-size 0.18rem
+          line-height 0.18rem
           span 
-            font-size 12px
+            font-size 0.12rem
           em 
             display inline-block
-            font-size 12px
+            font-size 0.12rem
             font-weight 400 
             color #000
             transform scale(0.9)
             position relative 
-            top -1.5px
+            top -0.015rem
             img 
               position relative 
-              top -1px
-              margin-right 1px
-              widht 13px
-              height 13px
+              top -0.01rem
+              margin-right 0.01rem
+              widht 0.13rem
+              height 0.13rem
               vertical-align center
         i 
           display inline-block
-          padding 2px 4px 
+          padding 0.02rem 0.04rem 
           
 </style>
 <style lang="stylus">
 #goods-list 
   .van-button--mini
-    height 20px
-  
+    height 0.2rem
 </style>

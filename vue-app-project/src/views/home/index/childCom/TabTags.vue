@@ -1,6 +1,6 @@
 <template>
   <van-tabs swipeable id="tab-tag">
-    <van-tab v-for="item in tabTags.list" :key="item.icon_name">
+    <van-tab v-for="item in tabTags.list" :key="item.icon_name" >
         <template #title ><img :src="item.icon_img" alt="" class="icon"> {{item.icon_name}}</template>
     </van-tab>
     <GoodsList></GoodsList>
@@ -38,12 +38,11 @@ export default {
 
 <style lang="stylus" scoped>
 .icon
-  width 20px
-  height 20px
+  width 0.2rem
+  height 0.2rem
   position relative 
   vertical-align center 
-  top -1px
-
+  top -0.01rem
 .van-tabs__line
   display none 
 </style>
@@ -54,9 +53,9 @@ export default {
   .van-tabs__line
     background-color transparent
   div[class~="van-tab"]
-    margin 5px
-    height 36px
+    margin 0.05rem
+    height 0.36rem
     background-color white
-    border-radius 5px
-    box-shadow 0px 0px 5px 0px #eee
+    border-radius 0.05rem
+    box-shadow 0rem 0rem 0.05rem 0rem #eee
 </style>
